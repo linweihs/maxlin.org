@@ -1,0 +1,12 @@
+{
+  "name": "maxlin.org",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "jekyll build",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "4.15.2"
+  }
+}
