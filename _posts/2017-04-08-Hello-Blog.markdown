@@ -2,7 +2,7 @@
 layout: post
 class: post
 title: Hello Blog!
-visible: 1
+published: false
 ---
 
 Hey there! This is my blog, and i have everything to share.
