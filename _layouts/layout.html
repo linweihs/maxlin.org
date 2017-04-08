@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title> {{ site.title }} </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Quicksand|Rubik|Squada+One|Open+Sans:400,700|Cabin" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+</head>
+<body>
+    <div class="page-header">
+        <div class="container">
+        <h1 class="text-center">WEI-HSIANG LIN</h1>
+    </div>
+    </div>
+
+    <div class="container center-block">
+        <div class="row">
+            <div class="col-md-3">
+                {% include about.html %}
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                {{ content }}
+            </div>
+            <div class="col-md-3">
+                {% include hey.html %}
+                {% include imalso.html %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
