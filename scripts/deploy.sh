@@ -3,6 +3,7 @@ set -ev
 
 echo "hello world from shell"
 # copy id_rsa public key to .ssh/authorized_keys
+chmod 400 ./id_rsa
 chmod 400 ./id_rsa.pub
 echo `cat ./id_rsa.pub`
 echo `pwd`
