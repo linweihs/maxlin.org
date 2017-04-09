@@ -75,6 +75,11 @@ how to configure...[tutorial](https://www.linode.com/docs/websites/nginx/how-to-
 ```
 apt-get install supervisor
 ```
+reread & reload
+```
+sudo supervisorctl reread
+sudo supervisorctl reload
+```
 
 # Data 
 * Most of the data are served static page, so I wrote in html, markdown languages.
@@ -179,7 +184,7 @@ sudo service nginx start
 ```
 
 ### Action items
-1. Run nodejs by supervisor
+1. Run nodejs by supervisor (done)
 2. Run nodejs on locahost only, not exposed to WWW
 3. Way to publish content easily through cmd or CI/CD
 4. Nginx configuration on SSL.
