@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/linweihs/maxlin.org.svg)](https://travis-ci.org/linweihs/maxlin.org)
+
 # Tech stacks
 * [Jekyll](https://jekyllrb.com/), [nodejs](https://nodejs.org/en/), [nginx](https://nginx.org/en/)(Reverse proxy)
  
