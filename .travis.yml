@@ -4,6 +4,7 @@ node_js:
 
 deploy:
   provider: script
+  skip_cleanup: true
   script: scripts/deploy.sh
   on:
     branch: master
