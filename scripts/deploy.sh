@@ -8,5 +8,5 @@ echo $RSA_PUB_KEY >> ~/.ssh/id_rsa.pub
 chmod 400 ~/.ssh/id_rsa.pub
 echo `cat ~/.ssh/id_rsa.pub`
 echo `pwd`
-scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa.pub ./scrips/deploy.sh travis_ci@45.56.87.220:~/
+scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa.pub -o RSAAuthentication=yes ./scrips/deploy.sh travis_ci@45.56.87.220:~/
 
