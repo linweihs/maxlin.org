@@ -102,6 +102,29 @@ lessc --clean-css bootstrap.less /css/bootstrap.min.css
 ## Changing the icon font location
 Bootstrap assumes icon font files will be located in the ../fonts/ directory, relative to the compiled CSS files.
 
+# Running Server
+
+### Jekyll 
+Generate HTML files and directory structure in "\_site"
+```
+jekyll build [-d] [path]
+```
+OR Preview first on port 4000
+```
+bundle exec jekyll serve
+```
+
+### Nodejs
+```
+node app.js <port>
+```
+refer to script section of package.json for more customization.
+
+
+### Nginx
+```
+sudo service nginx start
+```
 
 # Directory Layout
 ```
