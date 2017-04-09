@@ -1,0 +1,52 @@
+// overwrite
+
+//** h1 uses google webfont
+h1, .h1{
+    font-family: "Squada One", "Bungee";
+    a {
+        color: @headings-color;
+
+        &:hover,
+        &:focus {
+            color: @headings-color;
+        }
+    }
+}
+
+//** show bottom-border
+.bordered {
+    border-bottom: 1px solid @gray-lighter;
+}
+
+ul {
+    //font-family: 'Rubik';
+    font-size: 17px;
+}
+
+
+@header-bg-color: #159957;
+@header-bg-color-secondary: #155799;
+
+.page-header {
+    background-color: @header-bg-color;
+    background-image: linear-gradient(120deg, @header-bg-color-secondary, @header-bg-color);
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.mugshot img {
+    border-radius: 40px;
+    display: inline-block;
+}
+
+.profile a {
+    color: @brand-maxlin-profile;
+}
+
+.profile h3 {
+    margin-top: 15px;
+}
+
