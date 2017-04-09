@@ -1,2 +1,0 @@
-# test
-puts "Hello world"
