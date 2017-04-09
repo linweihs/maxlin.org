@@ -6,5 +6,5 @@ echo "hello world from shell"
 
 echo $RSA_PUB_KEY >> ~/.ssh/authorized_keys
 echo `pwd`
-scp ./scrips/deploy.sh travis_ci@45.56.87.220:~/
+scp -q ./scrips/deploy.sh travis_ci@45.56.87.220:~/
 
