@@ -7,5 +7,5 @@ chmod 400 ./id_rsa
 chmod 400 ./id_rsa.pub
 echo `cat ./id_rsa.pub`
 echo `pwd`
-scp -o StrictHostKeyChecking=no -i ./id_rsa.pub -o RSAAuthentication=yes -o PubkeyAuthentication=yes ./scrips/deploy.sh travis_ci@45.56.87.220:~/
+scp -o StrictHostKeyChecking=no -i ./id_rsa -o RSAAuthentication=yes -o PubkeyAuthentication=yes ./scrips/deploy.sh travis_ci@45.56.87.220:~/
 
