@@ -32,3 +32,4 @@ exclude:
   - package.json
   - node_modules
   - app.js
+  - [vendor]
