@@ -1,6 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0-p648
+script: bundle exec jekyll
 deploy:
   provider: script
   skip_cleanup: true
