@@ -9,7 +9,7 @@ The infrastructure services, tools supported behind AWS and Google Cloud are tre
 
 Also, the price, fees are expensive, charged by flavor type per hour, everything should be calculated well here.
 
-Other than that, [Wordpress]() also provides web hosting service, but I want to have fully controll of everything. 
+Other than that, [Wordpress](https://wordpress.com/) also provides web hosting service, but I want to have fully controll of everything. 
 
 ## Linode ! Simply Awesome
 
