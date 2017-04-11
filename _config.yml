@@ -40,3 +40,4 @@ exclude:
   - scripts
   - id_rsa
   - README.md
+  - local_deploy.sh
