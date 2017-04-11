@@ -34,3 +34,8 @@ exclude:
   - app.js
 # avoid build issue https://github.com/jekyll/jekyll/issues/2938
   - vendor
+  - less
+  - nginx.conf
+  - supervisor.conf
+  - scripts
+  - id_rsa
