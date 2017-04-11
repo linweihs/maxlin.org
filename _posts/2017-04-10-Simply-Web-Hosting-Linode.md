@@ -11,7 +11,7 @@ Also, the price, fees are expensive, charged by flavor type per hour, everything
 
 Other than that, [Wordpress]() also provides web hosting service, but I want to have fully controll of everything. 
 
-## Linode ! Simplely Awesome
+## Linode ! Simply Awesome
 
 [Linode](https://www.linode.com/) is incredible simple to set up ! 
 * You choose a flavor (cpu/mem/disk)
