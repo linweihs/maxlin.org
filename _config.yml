@@ -39,3 +39,4 @@ exclude:
   - supervisor.conf
   - scripts
   - id_rsa
+  - README.md
