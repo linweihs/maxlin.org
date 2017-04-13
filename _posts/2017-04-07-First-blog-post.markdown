@@ -1,6 +1,7 @@
 ---
 layout: post
 class: post
+comments: true
 title: First blog post
 ---
 

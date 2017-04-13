@@ -2,6 +2,7 @@
 title: Simply Web Hosting, Linode!
 layout: post
 class: post
+comments: true
 ---
 
 Recently I start to think about hosting my own blog, and I was considering hosting either on [AWS](https://aws.amazon.com/) or [Google Cloud](https://cloud.google.com/).
