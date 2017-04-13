@@ -187,6 +187,8 @@ sudo service nginx start
 
 ### Action items
 1. Run nodejs by supervisor (done)
-2. Run nodejs on locahost only, not exposed to WWW
-3. Way to publish content easily through cmd or CI/CD
+2. Run nodejs on locahost only, not exposed to WWW (done)
+3. Way to publish content easily through cmd or CI/CD (done)
 4. Nginx configuration on SSL.
+5. Add Disqus to the site (done)
+6. Add Google Analytics
