@@ -36,6 +36,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    redcarpet (3.4.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
@@ -47,6 +48,7 @@ DEPENDENCIES
   jekyll (= 3.4.3)
   jekyll-feed (~> 0.6)
   rake (= 0.9.6)
+  redcarpet (~> 3.3, >= 3.3.4)
   tzinfo-data
 
 RUBY VERSION

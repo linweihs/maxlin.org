@@ -6,9 +6,9 @@ comments: true
 ---
 ## Set up environment on Linode
 
-Being a full time devops engineer over 2 years, I'm comfortable about setting up service swiftly and includes CI/CD (will cover how i setup my CICD with travis soon).
+Basic setup of my linode environment
 
-Here I'm going to share some of simple setup in Linux environment.
+I will share more info about how I setup CI/CD, Chef Server in other posts.
 
 ### Signing Up Linode
 
@@ -26,100 +26,109 @@ The great power comes with great responsibility.
 In this case, I create a unix user called maxlin. And I grant myself ability to execute commands as sudo if necessary.
 
 1. add user
-```
-adduser <username>
-```
 
+    ```bash
+    $ adduser <username>
+    ```
 2. sudoers
-```
-usermod -a -G sudo <username>
-```
+
+    ```bash
+    $ usermod -a -G sudo <username>
+    ```
 3. Generate SSH key
-  
   * On your laptop, generate RSA key
-    ```
-    ssh-keygen -t rsa -b 4096
-    ```
+
+        ```bash
+        $ ssh-keygen -t rsa -b 4096
+        ```
   * copy public key to remote linode
-    ```
-    scp ~/.ssh/id_rsa.pub maxlin@<server_IP>:
-    ```
+
+        ```bash
+        $ scp ~/.ssh/id_rsa.pub maxlin@<server_IP>:
+        ```
   * On linode (logged in as maxlin)
-    ```
-    mkdir .ssh
-    mv id_rsa.pub .ssh/authorized_keys
-    chown -R maxlin:maxlin .ssh
-    chmod 700 .ssh
-    chmod 600 .ssh/authorized_keys
-    ```
+
+        ```bash
+        mkdir .ssh
+        mv id_rsa.pub .ssh/authorized_keys
+        chown -R maxlin:maxlin .ssh
+        chmod 700 .ssh
+        chmod 600 .ssh/authorized_keys
+        ```
 
 4. Enable key-based authentication on SSH
-```
-vim /etc/ssh/sshd_config
-#
-...
-PubkeyAuthentication yes
-...
-```
+
+    ```bash
+    $ vim /etc/ssh/sshd_config
+    # Turn on Pubkey authentication
+    ...
+    PubkeyAuthentication yes
+    ...
+    ```
 
 5. Disable root login
-```
-vim /etc/ssh/sshd_config
-# search for PermitRootLogin
- Set PermitRootLogin no
-PermitRootLogin no
-```
 
-6. Keep alive ssh connection
+    ```bash
+    vim /etc/ssh/sshd_config
+    #search for PermitRootLogin
+    #Set PermitRootLogin no
+    PermitRootLogin no
+    ```
+    
+6. Keep alive SSH connection
 
-  On laptop, create ~/.ssh/config, and add following content
-```
-Host <hostname>
-    Hostname <hostname>
-    Port 22
-    User root
-    ServerAliveInterval 240
-    ServerAliveCountMax 2
-```
+    ```bash
+    # On laptop, create ~/.ssh/config with following content
+    Host <hostname>
+        Hostname <hostname>
+        Port 22
+        User root
+        ServerAliveInterval 240
+        ServerAliveCountMax 2
+    ```
 
 #### Vim editor basic setup
 Most of time involved will be VIM editor. I have some basic vim syntax highlighting configuration in [repo](https://github.com/linweihs/bash). Fork it and copy the file to your home directory.
 
-```
-cp -r /path/to/repo/.vim ~/
-cp -r /path/to/repo/.vimrc ~/
+```bash
+$ cp -r /path/to/repo/.vim ~/
+$ cp -r /path/to/repo/.vimrc ~/
 ```
 
 #### Bash History
 
-I also increase bash history size, so sometime i forgot what i did before, i can always easily look it up in the history
-Put this into ~/.bash_profile
+I also increase bash history size, if sometime I forgot what I did before, I can always easily look it up in the history.
 
-{% highlight bash linenos %}
+```bash
+# Inside ~/.bash_profile
 # Setting history length see HISTSIZE and HISTFILESIZE
 HISTSIZE=10000
 HISTFILESIZE=100000
-{% endhighlight %}
+```
 
 ### Install Nodejs, nginx, daemon service
 
 #### NodeJS
 I prefer installing node by nvm (Node Version Manager).
-```
-# install nvm
+
+```bash
+#install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
 ```
 Activate nvm by typing the following at the command line. It set env variables and path in ~/.bashrc
-```
-. ~/.nvm/nvm.sh
+
+```bash
+$ . ~/.nvm/nvm.sh
 ```
 Use nvm to install the version of Node.js you intend to use by typing the following at the command line.
-```
-nvm install 6.10.1
+
+```bash
+$ nvm install 6.10.1
 ```
 
 you are done !
-```
+
+```bash
 $ node -v
 > v6.10.1
 ```
@@ -127,35 +136,42 @@ $ node -v
 #### NginX
 
 Incredible simple to install NginX
-```
-apt-get install nginx
+
+```bash
+$ apt-get install nginx
 ```
 
 configuration path
+
 ```
 /etc/nginx/nginx.conf
 ```
 
 Use service to manage reload, restart, status
-```
-sudo service nginx status
+
+```bash
+$ sudo service nginx status
 ```
 
 #### Supervisor
 
-```
-apt-get install supervisor
+Install
+
+```bash
+$ apt-get install supervisor
 ```
 
-configuration
-```
+Configuration
+
+```bash
 /etc/supervisor/supervisord.conf
 ```
 
-manage services
-```
-sudo supervisorctl reread
-sudo supervisorctl reload
+Manage services
+
+```bash
+$ sudo supervisorctl reread
+$ sudo supervisorctl reload
 ```
 
 ### Conclusion
@@ -163,4 +179,3 @@ sudo supervisorctl reload
 The above is simple basic setup and should be enough to get you started for most of the things.
 
 I will post how I did CI/CD using [Travis](https://travis-ci.org/).
-
