@@ -10,15 +10,15 @@ Being a full time devops engineer over 2 years, I'm comfortable about setting up
 
 Here I'm going to share some of simple setup in Linux environment.
 
-## Signing Up Linode
+### Signing Up Linode
 
 Linode have enough tutorial to help you get started already. You can always find useful document online.
 
 Once you signed up, you can decide what flavor of instance you are interested in. The smallest instance is way enough for me to host a blog.
 
-## Login to the box
+### Login to the box
 
-### Simple BASH env setup
+#### Simple BASH env setup
 
 The first time log in will be root, but we don't want to execute any commands as root becasue it could be risky at some point you could accidentally messed up some config.
 The great power comes with great responsibility.
@@ -34,27 +34,24 @@ adduser <username>
 ```
 usermod -a -G sudo <username>
 ```
-
 3. Generate SSH key
-
-  On your laptop, generate RSA key
-```
-ssh-keygen -t rsa -b 4096
-```
-
-  copy public key to remote linode
-```
-scp ~/.ssh/id_rsa.pub maxlin@<server_IP>:
-```
-
-  On linode (logged in as maxlin)
-```
-mkdir .ssh
-mv id_rsa.pub .ssh/authorized_keys
-chown -R maxlin:maxlin .ssh
-chmod 700 .ssh
-chmod 600 .ssh/authorized_keys
-```
+  
+  * On your laptop, generate RSA key
+    ```
+    ssh-keygen -t rsa -b 4096
+    ```
+  * copy public key to remote linode
+    ```
+    scp ~/.ssh/id_rsa.pub maxlin@<server_IP>:
+    ```
+  * On linode (logged in as maxlin)
+    ```
+    mkdir .ssh
+    mv id_rsa.pub .ssh/authorized_keys
+    chown -R maxlin:maxlin .ssh
+    chmod 700 .ssh
+    chmod 600 .ssh/authorized_keys
+    ```
 
 4. Enable key-based authentication on SSH
 ```
@@ -85,7 +82,7 @@ Host <hostname>
     ServerAliveCountMax 2
 ```
 
-### Vim editor basic setup
+#### Vim editor basic setup
 Most of time involved will be VIM editor. I have some basic vim syntax highlighting configuration in [repo](https://github.com/linweihs/bash). Fork it and copy the file to your home directory.
 
 ```
@@ -93,7 +90,7 @@ cp -r /path/to/repo/.vim ~/
 cp -r /path/to/repo/.vimrc ~/
 ```
 
-### Bash History
+#### Bash History
 
 I also increase bash history size, so sometime i forgot what i did before, i can always easily look it up in the history
 Put this into ~/.bash_profile
@@ -104,9 +101,9 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 ```
 
-## Install Nodejs, nginx, daemon service
+### Install Nodejs, nginx, daemon service
 
-### NodeJS
+#### NodeJS
 I prefer installing node by nvm (Node Version Manager).
 ```
 # install nvm
@@ -127,7 +124,7 @@ $ node -v
 > v6.10.1
 ```
 
-### NginX
+#### NginX
 
 Incredible simple to install NginX
 ```
@@ -144,7 +141,7 @@ Use service to manage reload, restart, status
 sudo service nginx status
 ```
 
-### Supervisor
+#### Supervisor
 
 ```
 apt-get install supervisor
@@ -161,7 +158,7 @@ sudo supervisorctl reread
 sudo supervisorctl reload
 ```
 
-## Conclusion
+### Conclusion
 
 The above is simple basic setup and should be enough to get you started for most of the things.
 
