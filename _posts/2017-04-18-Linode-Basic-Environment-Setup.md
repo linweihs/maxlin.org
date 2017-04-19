@@ -4,7 +4,7 @@ layout: post
 class: post
 comments: true
 ---
-# Set up environment on Linode
+## Set up environment on Linode
 
 Being a full time devops engineer over 2 years, I'm comfortable about setting up service swiftly and includes CI/CD (will cover how i setup my CICD with travis soon).
 
@@ -26,7 +26,6 @@ The great power comes with great responsibility.
 In this case, I create a unix user called maxlin. And I grant myself ability to execute commands as sudo if necessary.
 
 1. add user
-
 ```
 adduser <username>
 ```
@@ -38,17 +37,17 @@ usermod -a -G sudo <username>
 
 3. Generate SSH key
 
-On your laptop, generate RSA key
+  On your laptop, generate RSA key
 ```
 ssh-keygen -t rsa -b 4096
 ```
 
-copy public key to remote linode
+  copy public key to remote linode
 ```
 scp ~/.ssh/id_rsa.pub maxlin@<server_IP>:
 ```
 
-On linode (logged in as maxlin)
+  On linode (logged in as maxlin)
 ```
 mkdir .ssh
 mv id_rsa.pub .ssh/authorized_keys
@@ -76,8 +75,7 @@ PermitRootLogin no
 
 6. Keep alive ssh connection
 
-On laptop, create ~/.ssh/config
-Add following content
+  On laptop, create ~/.ssh/config, and add following content
 ```
 Host <hostname>
     Hostname <hostname>
@@ -106,9 +104,9 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 ```
 
-# Install Nodejs, nginx, daemon service
+## Install Nodejs, nginx, daemon service
 
-## NodeJS
+### NodeJS
 I prefer installing node by nvm (Node Version Manager).
 ```
 # install nvm
@@ -129,7 +127,7 @@ $ node -v
 > v6.10.1
 ```
 
-## NginX
+### NginX
 
 Incredible simple to install NginX
 ```
@@ -146,7 +144,7 @@ Use service to manage reload, restart, status
 sudo service nginx status
 ```
 
-## Supervisor
+### Supervisor
 
 ```
 apt-get install supervisor
@@ -163,7 +161,7 @@ sudo supervisorctl reread
 sudo supervisorctl reload
 ```
 
-# Conclusion
+## Conclusion
 
 The above is simple basic setup and should be enough to get you started for most of the things.
 
