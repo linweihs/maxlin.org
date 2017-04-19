@@ -95,11 +95,11 @@ cp -r /path/to/repo/.vimrc ~/
 I also increase bash history size, so sometime i forgot what i did before, i can always easily look it up in the history
 Put this into ~/.bash_profile
 
-```
+{% highlight bash linenos %}
 # Setting history length see HISTSIZE and HISTFILESIZE
 HISTSIZE=10000
 HISTFILESIZE=100000
-```
+{% endhighlight %}
 
 ### Install Nodejs, nginx, daemon service
 
