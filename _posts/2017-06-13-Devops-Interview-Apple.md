@@ -46,7 +46,7 @@ write a code snippet in awk and name it ```abc```.
 
 Parse the data file like this...```cat /etc/passwd | awk -f abc```
 
-```Awk
+{% highlight awk %}
 function reverse(s)
 {
   p = ""
@@ -63,4 +63,4 @@ BEGIN {
     $5 = reverse($5)
     print $1","$2","$5","$3
 }
-``` 
+{% endhighlight %}
