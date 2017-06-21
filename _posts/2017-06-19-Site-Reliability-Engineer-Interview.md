@@ -8,12 +8,13 @@ comments: true
 ## Site Reliability Engineer Interview Questions
 I recall I was asked by Linkedin in the techinal phone interview. Some times later, I see this again in other blogs. It seems like this is a typical question to jump start the interview with SRE positions. 
 
-## Question 1 Fizz Buzz
+## Question 1: Fizz Buzz
 Write a program that outputs the string representation of numbers from 1 to n.
 
 But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
 
 **Example**:
+
 ```
 n = 15,
 
@@ -66,8 +67,9 @@ public class Solution {
 }
 ```
 
-## Question 2 Parse log and extract values 
-It test the knowledge of regex and hashtables
+## Question 2: Parse log and extract values 
+It tests the knowledge of regex and hashtable.
+
 ```
 Dec  3 00:02:54 Mac Google Chrome Helper[69194]: Couldn't set selectedTextBackgroundColor from default ()
 Dec  3 00:03:05 Mac Safari[68992]: KeychainGetICDPStatus: keychain: -25300
@@ -79,19 +81,21 @@ Dec  3 00:03:08 Mac WindowServer[68664]: CGXGetConnectionProperty: Invalid conne
 ```
 
 Write a script which parses /var/log/messages and generates a CSV with two columns: minute, number_of_messages in sorted time order.
+
 ```
 minute,number_of_messages
 Dec  3 00:02,1
 Dec  3 00:03,6
 ```
 Extract the program name from the field between the hostname and the log message and output those values in columns.
+
 ```
 minute,number_of_messages,Google Chrome Helper,Safari,com.apple.xpc.launchd,WindowServer,garcon
 Dec  3 00:02,1,0,0,0,0
 Dec  3 00:03,0,2,1,2,1
 ```
 
-## Question 3 Employee hierarchy 
+## Question 3: Employee Hierarchy Traverse
 assume there is a REST API available at ```http://www.employee.com/api``` for accessing employee information The employee information endpoint is ```/employee/<id>``` Each employee record you retrieve will be a JSON object with the following keys:
 
 * ```name``` refers to a String that contains the employee’s first and last name
@@ -99,6 +103,7 @@ assume there is a REST API available at ```http://www.employee.com/api``` for ac
 * ```reports``` refers to an Array of Strings containing the IDs of the employee’s direct reports
 
 Write a function that will take an employee ID and print out the entire hierarchy of employees under that employee. For example, suppose that Flynn Mackie’s employee id is '**A123456789**' and his only direct reports are Wesley Thomas and Nina Chiswick. If you provide '**A123456789**' as input to your function, you will see the sample output below.
+        
 ```
 Flynn Mackie - Senior VP of Engineering
   Wesley Thomas - VP of Design
