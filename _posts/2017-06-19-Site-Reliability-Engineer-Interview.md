@@ -6,7 +6,7 @@ tags: interview SRE
 comments: true
 ---
 ## Site Reliability Engineer Interview Questions
-I recall I was asked by Linkedin in the techinal phone interview. Some times later, I see this again in other blogs. It seems like this is a typical question to jump start the interview with SRE positions. 
+I recall I was asked by _Linkedin_ in the techinal phone interview. Some times later, I see this again in other blogs. It seems like this is a typical question to jump start the interview with SRE positions. 
 
 ## Question 1: Fizz Buzz
 Write a program that outputs the string representation of numbers from 1 to n.
@@ -80,7 +80,7 @@ Dec  3 00:03:08 Mac garcon[68729]: host connection <NSXPCConnection: 0x7fc9d8f1e
 Dec  3 00:03:08 Mac WindowServer[68664]: CGXGetConnectionProperty: Invalid connection 20367
 ```
 
-Write a script which parses /var/log/messages and generates a CSV with two columns: minute, number_of_messages in sorted time order.
+Write a script which parses ```/var/log/messages``` and generates a CSV with two columns: **minute**,** number_of_messages** in sorted time order.
 
 ```
 minute,number_of_messages
