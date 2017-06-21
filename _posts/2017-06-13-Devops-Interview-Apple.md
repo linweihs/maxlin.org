@@ -42,7 +42,11 @@ The ```sed``` can throw in regex, but I have no clue how to reverse a string or 
 
 I study ```awk``` a bit and figure out this is one of way to achieve the result.
 
-```awk
+write a code snippet in awk and name it ```abc```.
+
+Parse the data file like this...```cat /etc/passwd | awk -f abc```
+
+```Awk
 function reverse(s)
 {
   p = ""
@@ -58,5 +62,5 @@ BEGIN {
 {
     $5 = reverse($5)
     print $1","$2","$5","$3
-
+}
 ``` 
