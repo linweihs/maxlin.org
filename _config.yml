@@ -23,18 +23,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-#markdown: redcarpet
-#highligher: rouge
-#redcarpet:
-#    extensions: ["fenced_code_blocks", "disable_indented_code_blocks", "highlight", "no_intra_emphasis", "autolink"]
+markdown: redcarpet
+highligher: rouge
+redcarpet:
+    extensions: ["fenced_code_blocks", "disable_indented_code_blocks", "highlight", "no_intra_emphasis", "autolink"]
 # # switch to kramdown on 06/21/2017
 # ref: http://idratherbewriting.com/2016/02/21/bug-with-kramdown-and-rouge-with-github-pages/
-markdown: kramdown
-highligher: rouge
-kramdown:
-  input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
+#markdown: kramdown
+#highligher: rouge
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  syntax_highlighter: rouge
 gems:
   - jekyll-feed
   - jekyll-gist
