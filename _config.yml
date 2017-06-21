@@ -29,6 +29,7 @@ redcarpet:
     extensions: ["fenced_code_blocks", "disable_indented_code_blocks", "highlight", "no_intra_emphasis", "autolink"]
 gems:
   - jekyll-feed
+  - jekyll-gist
 exclude:
   - Gemfile
   - Gemfile.lock
