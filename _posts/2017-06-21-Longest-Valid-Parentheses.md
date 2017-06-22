@@ -56,7 +56,3 @@ public class Solution {
     }
 }
 ```
-## Gist
-{% gist 7c53d849aadc29a41d40587a00169b17 %}
-## Leetcode Ref
-https://leetcode.com/problems/longest-valid-parentheses/#/description
