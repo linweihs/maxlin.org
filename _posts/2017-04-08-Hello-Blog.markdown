@@ -2,6 +2,7 @@
 layout: post
 class: post
 title: Hello Blog!
+category: blog
 published: false
 ---
 

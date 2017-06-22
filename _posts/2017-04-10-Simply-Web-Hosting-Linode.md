@@ -2,6 +2,7 @@
 title: Simply Web Hosting, Linode!
 layout: post
 class: post
+category: blog
 comments: true
 ---
 

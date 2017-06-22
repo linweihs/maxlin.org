@@ -2,6 +2,7 @@
 layout: post
 class: post
 comments: true
+category: blog
 title: First blog post
 ---
 

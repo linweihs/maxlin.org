@@ -2,6 +2,7 @@
 title: How I setup CI/CD with Travis
 layout: post
 class: post
+category: blog
 comments: true
 ---
 ## Preface

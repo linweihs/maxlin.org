@@ -2,6 +2,7 @@
 title: Linode Basic Environment Setup 
 layout: post
 class: post
+category: blog
 comments: true
 ---
 ## Set up environment on Linode

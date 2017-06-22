@@ -3,6 +3,7 @@ title: Devops Phone Interview
 layout: post
 class: post
 tags: interview SRE devops script bash apple 
+category: code
 comments: true
 ---
 ## Devops Phone Interview

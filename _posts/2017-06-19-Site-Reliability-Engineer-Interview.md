@@ -3,6 +3,7 @@ title: Site Reliability Engineer Interview
 layout: post
 class: post
 tags: interview SRE 
+category: code
 comments: true
 ---
 ## Site Reliability Engineer Interview Questions

@@ -2,6 +2,7 @@
 title: Syntax Highlighter and Markdown 
 layout: post
 class: post
+category: blog
 comments: true
 ---
 ## Syntax Highligher
