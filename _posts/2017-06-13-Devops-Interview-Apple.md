@@ -65,3 +65,26 @@ BEGIN {
     print $1","$2","$5","$3
 }
 ```
+
+## Solution - Python
+
+```python
+# show col 1, 3, 5, 6
+# reverse on col 5
+from __future__ import print_function
+
+input = """fthrock:x:26814:100:Frank Throckmorton:/home/fthrock:/usr/local/bin/bash
+badger:x:38829:100:Wayne Badger:/home/badger:/usr/local/bin/bash
+bwatt:x:97336:100:Brian J. Watt:/home/bwatt:/bin/bash
+jans:x:29512:100:Jan Schaumann:/home/jans:/usr/local/bin/bash
+pflaums:x:56393:100:Stephen Pflaum:/home/pflaums:/usr/local/bin/bash
+kausar:x:85486:100:Kausar Khizra:/home/kausar:/usr/local/bin/bash
+maxlin:x:86471:100:Wei-hsiang Lin:/home/maxlin:/usr/local/bin/bash"""
+
+
+data = input.split('\n')
+
+for d in data:
+    cols =  d.split(':')
+    print(cols[0], cols[2], cols[4][::-1], cols[5],sep=",")
+```
